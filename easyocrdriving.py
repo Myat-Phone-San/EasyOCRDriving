@@ -16,7 +16,7 @@ st.set_page_config(
 )
 
 # Define the maximum processing width for faster OCR and reduced noise
-OPTIMIZED_WIDTH = 600 
+OPTIMIZED_WIDTH = 1200 
 # Increased tolerance slightly to account for slightly off-horizontal scans
 VERTICAL_TOLERANCE = 20 
 
