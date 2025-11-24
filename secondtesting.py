@@ -69,7 +69,6 @@ If a value is not found or is unreadable, return an empty string "" for the 'val
 Do not include any extra text or formatting outside of the JSON object.
 """
 
----
 
 ## 3. File Handling Function
 
@@ -87,10 +86,6 @@ def handle_file_to_pil(uploaded_file):
         st.error(f"Error converting file to image: {e}")
         return None
         
-# Removed handle_pil_to_cv2
-# Removed preprocess_image
-
----
 
 ## 4. AI Extraction Logic
 
@@ -120,7 +115,6 @@ def run_structured_extraction(image_pil):
         st.error(f"An unexpected error occurred during AI processing: {e}")
         return None
 
----
 
 ## 5. Helper Functions (Updated for Confidence)
 
@@ -173,8 +167,6 @@ def create_downloadable_files(extracted_dict):
     
     return txt_content, csv_content, doc_content, extracted_dict
 
-
----
 
 ## 6. UI and Execution Flow (Updated for Confidence Display)
 
@@ -259,9 +251,9 @@ def process_image_and_display(original_image_pil, unique_key_suffix):
             key=f"download_doc_{unique_key_suffix}" 
         )
 
----
-
+# ----------------------------------------------------------------------
 ## 7. Main App Body
+# ----------------------------------------------------------------------
 
 st.title("🪪 Myanmar License Extractor (AI OCR)")
 st.caption("Powered by Google Gemini for Structured Data Extraction with Confidence Scoring.")
